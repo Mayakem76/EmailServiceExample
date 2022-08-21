@@ -1,0 +1,32 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: email address
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:mysql://localhost:3306/customquery1
+    username: root
+    password: Ub1m410rm1n0rc3ss4t
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+##       ddl-auto: list of possible options are:
+#validate: validate the schema, makes no changes to the database.
+#update: update the schema.
+#create: creates the schema, destroying previous data.
+#create-drop: drop the schema when the SessionFactory is closed explicitly, typically when the application is stopped.
+#none: does nothing with the schema, makes no changes to the database
